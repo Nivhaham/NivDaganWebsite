@@ -87,12 +87,12 @@ window.addEventListener('DOMContentLoaded', event => {
     // Check for saved theme preference or system preference
     const initializeTheme = () => {
         const savedTheme = localStorage.getItem('theme');
-        let theme = 'light';
+        let theme = 'dark';
         
         if (savedTheme) {
             theme = savedTheme;
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            theme = 'dark';
+            theme = 'light';
         }
         
         document.documentElement.setAttribute('data-theme', theme);
